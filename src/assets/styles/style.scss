@@ -1,82 +1,50 @@
 @import "reset.scss";
-
-body {
-	background-color: #fff;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
 
-.main-wrapper {
-	width: 1000px;
-	margin: 50px auto;
-	display: flex;
-	border: 1px solid #ccc;
-}
+$purple: #5C7BCF;
 
-.chat {
-	padding: 20px;
-	flex: 1;
-	max-height: 300px;
-	overflow-y: auto;
+// body {
+//     background: linear-gradient(120deg, $purple - 50, $purple + 50);
+// }
 
-	&__input {
-		margin-top: 50px;
-		padding: 5px 10px;
-		font-size: 20px;
-		width: 60%;
-	}
-}
-
-.message {
-	margin-top: 0;
-	margin-bottom: 10px;
-
-	&:last-child {
-		margin-bottom: 0;
-	}
-
-	&__date {
-		color: grey;
-		padding-right: 5px;
-		font-size: 12px;
-	}
-	&__author {
-		font-weight: bold;
-		padding-right: 5px;
-	}
-}
-
-.users {
-	width: 300px;
-	border-left: 1px solid #ccc;
-
-	& button {
-		display: block;
-		margin: 20px auto;
-	}
-
-	&__title {
-		border-bottom: 1px dotted #ccc;
-		text-align: center;
-		text-transform: uppercase;
-		padding-bottom: 15px;
-	}
-
-	& ul {
-		list-style-type: none;
-		margin: 0 0 20px 40px;
-		padding: 0;
-
-		& li {
-			&::before {
-				content: "";
-				width: 8px;
-				display: inline-block;
-				height: 8px;
-				position: relative;
-				top: -2px;
-				border-radius: 50%;
-				margin-right: 9px;
-				background-color: green;
-			}
-		}
-	}
+.app {
+    .input-group {
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+        padding: 0 250px;
+        input, .btn {
+            display: inline-block;
+            line-height: 170%;
+            -webkit-box-shadow: 5px 5px 19px 0px rgba(214,214,214,.3);
+            -moz-box-shadow: 5px 5px 19px 0px rgba(214,214,214,.3);
+            box-shadow: 5px 5px 19px 0px rgba(214,214,214,.3);
+        }
+        input {
+            border: 1px solid $purple + 25;
+            padding: 0 12px;
+            border-radius: 3px 0 0 3px;
+            flex: 1;
+            color: $purple;
+            font-size: 1rem;
+        }
+        .btn-container {
+            .btn {
+                background: $purple;
+                color: #fff;
+                padding: 7px 35px;
+                border-radius: 0 3px 3px 0;
+                cursor: pointer;
+                transition: all .3s ease-out;
+                font-size: 1rem;
+                &:hover {
+                    background: $purple + 25;
+                }
+            }
+        }
+    }
 }
