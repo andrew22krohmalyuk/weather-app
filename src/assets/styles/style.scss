@@ -12,11 +12,11 @@ $purple: #5C7BCF;
 // }
 
 .app {
+    padding: 0 250px;
     .input-group {
         display: flex;
         justify-content: center;
-        margin-top: 25px;
-        padding: 0 250px;
+        margin: 25px 0;
         input, .btn {
             display: inline-block;
             line-height: 170%;
@@ -43,6 +43,40 @@ $purple: #5C7BCF;
                 font-size: 1rem;
                 &:hover {
                     background: $purple + 25;
+                }
+            }
+        }
+    }
+    .items-container {
+        display: flex;
+        justify-content: space-around;
+        .item {
+            background: #3498db;
+            border-radius: 3px;
+            width: 200px;
+            height: 250px;
+            .weather-args {
+                height: 250px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                p {
+                    color: #fff;
+                }
+                .city {
+                    font-size: 1.5rem;
+                }
+                .desc {
+
+                }
+                .temp {
+                    margin-top: 50px;
+                    margin-bottom: 70px;
+                    font-size: 1.5rem;
+                    &:after {
+                        content: '°';
+                    }
                 }
             }
         }
