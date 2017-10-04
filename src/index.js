@@ -17,6 +17,8 @@ const store = createStoreWithMiddleware(
     load({namespace: "weather-storage"})
 );
 
+window.store = store
+
 render(
     <Provider store={store}>
         <App />
