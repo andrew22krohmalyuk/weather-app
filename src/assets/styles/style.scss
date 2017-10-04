@@ -70,6 +70,12 @@ $purple: #5C7BCF;
                 .desc {
 
                 }
+                .delete {
+                    font-size: 1.5rem;
+                    align-self: flex-end;
+                    padding-right: 10px;
+                    cursor: pointer;
+                }
                 .temp {
                     margin-top: 50px;
                     margin-bottom: 70px;
