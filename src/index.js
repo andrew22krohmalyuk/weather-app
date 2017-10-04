@@ -11,13 +11,15 @@ import './assets/styles/style.scss';
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
-// createStoreWithMiddleware.subscribe(() => {
-//     console.log('changed');
-// })
+const store = createStoreWithMiddleware(reducers);
+
+store.subscribe(() => {
+  console.log('test');
+})
 
 render(
     <Provider store={createStoreWithMiddleware(reducers)}>
         <App />
-    </Provider>
-    ,document.getElementById('root')
+    </Provider>,
+	document.getElementById('root')
 )
