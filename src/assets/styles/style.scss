@@ -11,12 +11,24 @@ $purple: #5C7BCF;
 //     background: linear-gradient(120deg, $purple - 50, $purple + 50);
 // }
 
+.wrapper {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .app {
-    padding: 0 250px;
+    //padding: 0 250px;
+    .current-weather {
+        background: $purple;
+        height: 90px;
+        color: #fff;
+        padding: 10px;
+    }
     .input-group {
         display: flex;
         justify-content: center;
-        margin: 25px 0;
+        margin: 50px 50px;
         input, .btn {
             display: inline-block;
             line-height: 170%;
@@ -48,15 +60,14 @@ $purple: #5C7BCF;
         }
     }
     .items-container {
-        display: flex;
+        margin: 50px 50px;
+        display: flex 1;
         justify-content: space-around;
         .item {
             background: #3498db;
             border-radius: 3px;
-            width: 200px;
-            height: 250px;
+            margin-bottom: 50px;
             .weather-args {
-                height: 250px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
@@ -66,6 +77,7 @@ $purple: #5C7BCF;
                 }
                 .city {
                     font-size: 1.5rem;
+                    margin-bottom: 15px;
                 }
                 .desc {
 
@@ -78,7 +90,7 @@ $purple: #5C7BCF;
                 }
                 .temp {
                     margin-top: 50px;
-                    margin-bottom: 70px;
+                    margin-bottom: 10px;
                     font-size: 1.5rem;
                     &:after {
                         content: '°';

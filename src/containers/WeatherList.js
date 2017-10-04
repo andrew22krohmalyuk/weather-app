@@ -24,7 +24,7 @@ class WeatherList extends Component {
         const timestamp = cityData.list[0].dt_txt;
         const id = cityData.city.id;
 
-        //console.log(`${cityName}: ${timestamp}`);
+        console.log(`${cityName}: ${timestamp}`);
         return(
             <div key={cityName} className="item" data-target={id}>
                 <div className={"weather-args " + desc.toLowerCase()}>

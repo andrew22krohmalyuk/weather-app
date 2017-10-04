@@ -1,5 +1,4 @@
-import {FETCH_WEATHER} from '../actions/index';
-import {DELETE_LOCATION} from '../actions/index';
+import {FETCH_WEATHER, DELETE_LOCATION, FETCH_CURRENT_WEATHER} from '../actions/index';
 
 export default function(state = [], action) {
     switch (action.type) {
