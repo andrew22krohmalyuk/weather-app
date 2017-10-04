@@ -7,34 +7,43 @@
 
 $purple: #5C7BCF;
 
-// body {
-//     background: linear-gradient(120deg, $purple - 50, $purple + 50);
-// }
+body {
+    background: linear-gradient(90deg, #136a8a, #267871);
+}
+
+.wrapper {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .app {
-    padding: 0 250px;
+    .current-weather {
+        background: rgba(0, 0, 0, .1);
+        height: 90px;
+        color: #fff;
+        padding: 10px;
+    }
     .input-group {
         display: flex;
         justify-content: center;
-        margin: 25px 0;
+        margin: 50px 50px;
         input, .btn {
             display: inline-block;
             line-height: 170%;
-            -webkit-box-shadow: 5px 5px 19px 0px rgba(214,214,214,.3);
-            -moz-box-shadow: 5px 5px 19px 0px rgba(214,214,214,.3);
-            box-shadow: 5px 5px 19px 0px rgba(214,214,214,.3);
         }
         input {
-            border: 1px solid $purple + 25;
+            border: 1px solid rgba(0, 0, 0, .1);
             padding: 0 12px;
             border-radius: 3px 0 0 3px;
             flex: 1;
-            color: $purple;
+            color: rgba(255, 255, 255, .7);
+            background: rgba(0, 0, 0, .1);
             font-size: 1rem;
         }
         .btn-container {
             .btn {
-                background: $purple;
+                background: rgba(0, 0, 0, .2);
                 color: #fff;
                 padding: 7px 35px;
                 border-radius: 0 3px 3px 0;
@@ -42,30 +51,30 @@ $purple: #5C7BCF;
                 transition: all .3s ease-out;
                 font-size: 1rem;
                 &:hover {
-                    background: $purple + 25;
+                    background: rgba(0, 0, 0, .4);
                 }
             }
         }
     }
     .items-container {
-        display: flex;
+        margin: 50px 50px;
+        display: flex 1;
         justify-content: space-around;
         .item {
-            background: #3498db;
+            background: linear-gradient(120deg,rgba(0, 0, 0, .1),rgba(0, 0, 0, .2));
             border-radius: 3px;
-            width: 200px;
-            height: 250px;
+            margin-bottom: 50px;
             .weather-args {
-                height: 250px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
                 align-items: center;
                 p {
-                    color: #fff;
+                    color: rgba(255, 255, 255, .7);
                 }
                 .city {
                     font-size: 1.5rem;
+                    margin-bottom: 15px;
                 }
                 .desc {
 
@@ -78,7 +87,7 @@ $purple: #5C7BCF;
                 }
                 .temp {
                     margin-top: 50px;
-                    margin-bottom: 70px;
+                    margin-bottom: 10px;
                     font-size: 1.5rem;
                     &:after {
                         content: '°';
