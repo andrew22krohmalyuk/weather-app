@@ -8,6 +8,8 @@ export default function(state = [], action) {
             return state.filter(item => {
                 return item.city.id !== action.id
             });
+        case FETCH_CURRENT_WEATHER:
+            return [action.payload.data, ...state];
     }
     return state;
 }

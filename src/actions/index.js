@@ -23,3 +23,13 @@ export function deleteLocation(id) {
         id
     }
 }
+
+export function getDataByIp() {
+    const url = `https://ipinfo.io/json`;
+    const _req = axios.get(url);
+
+    return {
+      type: FETCH_CURRENT_WEATHER,
+      payload: _req
+    }
+}
