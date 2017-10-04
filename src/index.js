@@ -7,18 +7,14 @@ import ReduxPromise from 'redux-promise';
 import App from './components/App';
 import reducers from './reducers';
 import { loadState, saveState } from './localStorage/index';
+//import store from './store/index';
 import './assets/styles/style.scss';
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
-
 const store = createStoreWithMiddleware(reducers);
 
-store.subscribe(() => {
-  console.log('test');
-})
-
 render(
-    <Provider store={createStoreWithMiddleware(reducers)}>
+    <Provider store={store}>
         <App />
     </Provider>,
 	document.getElementById('root')
