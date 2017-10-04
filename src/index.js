@@ -1,17 +1,21 @@
-import React from "react";
-import { render } from "react-dom";
-import { Provider } from "react-redux";
-import { createStore, applyMiddleware } from "redux";
+import React from 'react';
+import ReactDOM, {render} from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import ReduxPromise from 'redux-promise';
 
-import App from './components/App';
+import App from './components/app';
 import reducers from './reducers';
-import { loadState, saveState } from './localStorage/index';
-//import store from './store/index';
+
+import { save, load } from "redux-localstorage-simple";
 import './assets/styles/style.scss';
 
-const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
-const store = createStoreWithMiddleware(reducers);
+const createStoreWithMiddleware = applyMiddleware(ReduxPromise, save({namespace: "weather-storage"}))(createStore);
+
+const store = createStoreWithMiddleware(
+    reducers,
+    load({namespace: "weather-storage"})
+);
 
 render(
     <Provider store={store}>
