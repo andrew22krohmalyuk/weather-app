@@ -97,3 +97,69 @@ body {
         }
     }
 }
+
+@media screen and (max-width:900px) {
+  .wrapper {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+  }
+  .app {
+      padding: 10px;
+      .current-weather {
+
+      }
+      .input-group {
+          display: block;
+          margin: 0;
+          input, .btn {
+            width: 100%;
+
+          }
+          input {
+              height: 50px;
+              border: transparent;
+              margin-top: 15px;
+              margin-bottom: 15px;
+          }
+          .btn-container {
+              .btn {
+                    text-align: center;
+                    color: rgba(255, 255, 255, .6);
+                    background: rgba(0, 0, 0, .1);
+                  &:hover {
+
+                  }
+              }
+          }
+      }
+      .items-container {
+            margin: 0;
+            margin-top: 25px;
+          .item {
+
+              .weather-args {
+
+                  p {
+
+                  }
+                  .city {
+
+                  }
+                  .desc {
+
+                  }
+                  .delete {
+
+                  }
+                  .temp {
+
+                      &:after {
+                          //content: '°';
+                      }
+                  }
+              }
+          }
+      }
+  }
+}
